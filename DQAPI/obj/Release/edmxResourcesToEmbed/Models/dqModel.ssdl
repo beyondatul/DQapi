@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DeliveryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Order_tbl">
+    <Key>
+      <PropertyRef Name="PKEY" />
+    </Key>
+    <Property Name="PKEY" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobAccount_ID" Type="int" />
+    <Property Name="Trip_ID" Type="int" />
+    <Property Name="OldTrip_ID" Type="int" />
+    <Property Name="Status_ID" Type="int" />
+    <Property Name="Location_ID" Type="int" />
+    <Property Name="Unit_ID" Type="int" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="24" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="24" />
+    <Property Name="BuilderPONumber" Type="nvarchar" MaxLength="24" />
+    <Property Name="ShipTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDivision" Type="nvarchar" MaxLength="24" />
+    <Property Name="MapZone" Type="int" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="16" />
+    <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReqDate" Type="smalldatetime" />
+    <Property Name="ReqTime" Type="int" />
+    <Property Name="ShipmentNumber" Type="int" />
+    <Property Name="LoadSequence" Type="int" />
+    <Property Name="Cost" Type="money" />
+    <Property Name="Tax" Type="money" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="Weight" Type="int" />
+    <Property Name="Volume" Type="int" />
+    <Property Name="VolumeLock" Type="bit" />
+    <Property Name="LoadRating" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="Priority_ID" Type="int" />
+    <Property Name="OrderDate" Type="datetime" />
+    <Property Name="OrderChanged" Type="tinyint" />
+    <Property Name="ChgDate" Type="datetime" />
+    <Property Name="Signed" Type="tinyint" />
+    <Property Name="Pictures" Type="bit" />
+    <Property Name="CancelDate" Type="datetime" />
+    <Property Name="FillError" Type="tinyint" />
+    <Property Name="WrittenBy_ID" Type="int" />
+    <Property Name="AssignedSalesperson" Type="int" />
+    <Property Name="PKImport" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeliveriedDate" Type="datetime" />
+    <Property Name="StatusChanged" Type="bit" />
+    <Property Name="ReqDateChange" Type="bit" Nullable="false" />
+    <Property Name="ReqTimeChange" Type="bit" Nullable="false" />
+    <Property Name="TruckChange" Type="bit" />
+    <Property Name="RouteChanged" Type="bit" />
+    <Property Name="UpLoadToPhone" Type="tinyint" />
+    <Property Name="DropLat" Type="decimal" Precision="9" Scale="6" />
+    <Property Name="DropLong" Type="decimal" Precision="9" Scale="6" />
+    <Property Name="GeoRadius" Type="int" />
+    <Property Name="EMAILNOTIFICATION" Type="bit" />
+    <Property Name="ReferenceNumber" Type="varchar" MaxLength="300" />
+    <Property Name="AccountHold" Type="bit" />
+    <Property Name="PreviousStatus" Type="int" />
+    <Property Name="TransferNumber" Type="int" />
+    <Property Name="OrderTypeID" Type="int" />
+    <Property Name="Closed" Type="bit" />
+    <Property Name="TruckTypeID" Type="int" />
+    <Property Name="Mileage" Type="int" />
+    <Property Name="BackOrder" Type="bit" />
+    <Property Name="SpecialOrder" Type="bit" />
+    <Property Name="tsPHONEStatus" Type="datetime" />
+    <Property Name="CapacityLocationID" Type="int" />
+    <Property Name="dTimeStamp" Type="datetime" Nullable="false" />
+    <Property Name="ODTStatus" Type="varchar" MaxLength="25" />
+    <Property Name="OriginalLoadTimeID" Type="int" />
+    <Property Name="OriginalDeliveryDate" Type="datetime" />
+    <Property Name="OriginalLocationID" Type="int" />
+    <Property Name="HardTime" Type="bit" />
+    <Property Name="Duration" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ArrivalTime" Type="datetime" />
+    <Property Name="DepartureTime" Type="datetime" />
+    <Property Name="ETA" Type="datetime" />
+    <Property Name="ETD" Type="datetime" />
+    <Property Name="DeliveryLock" Type="bit" />
+    <Property Name="ShippingAddressNotJobAddress" Type="bit" />
+    <Property Name="UpLoadDate" Type="datetime" />
+    <Property Name="RouteDate" Type="datetime" />
+    <Property Name="ProductETA" Type="datetime" />
+    <Property Name="CustomerRequestedDate" Type="datetime" />
+    <Property Name="CODAmountReceived" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="COD" Type="bit" />
+    <Property Name="Core" Type="bit" />
+    <Property Name="ItemsReturn" Type="bit" Nullable="false" />
+    <Property Name="DefectReturn" Type="bit" Nullable="false" />
+    <Property Name="ShipVia_Id" Type="int" />
+    <Property Name="ExpDelTime" Type="datetime" />
+    <Property Name="ExpDelBegin" Type="datetime" />
+    <Property Name="AdjustedETA" Type="datetime" />
+    <Property Name="CustomerWebUpdate" Type="bit" />
+    <Property Name="TransferETA" Type="datetime" />
+    <Property Name="SxWritebackNotesDate" Type="datetime" />
+    <Property Name="Length" Type="int" />
+    <Property Name="Length2" Type="int" />
+    <Property Name="PayType" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddressChanged" Type="bit" />
+    <Property Name="PrintTicketCount" Type="int" />
+    <Property Name="ReImport" Type="tinyint" />
+    <Property Name="ScheduleLockDate" Type="datetime" />
+    <Property Name="WebOrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotQtyOrd" Type="int" />
+    <Property Name="TotQtyShp" Type="int" />
+    <Property Name="MilesFrom" Type="int" />
+    <Property Name="InternalUse" Type="bit" />
+  </EntityType>
+  <Function Name="sp_GetOrderData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="DeliveryModelStoreContainer">
+    <EntitySet Name="Order_tbl" EntityType="Self.Order_tbl" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DeliveryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Order_tbl">
+          <Key>
+            <PropertyRef Name="PKEY" />
+          </Key>
+          <Property Name="PKEY" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JobAccount_ID" Type="int" />
+          <Property Name="Trip_ID" Type="int" />
+          <Property Name="OldTrip_ID" Type="int" />
+          <Property Name="Status_ID" Type="int" />
+          <Property Name="Location_ID" Type="int" />
+          <Property Name="Unit_ID" Type="int" />
+          <Property Name="OrderNumber" Type="nvarchar" MaxLength="24" />
+          <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="24" />
+          <Property Name="BuilderPONumber" Type="nvarchar" MaxLength="24" />
+          <Property Name="ShipTo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubDivision" Type="nvarchar" MaxLength="24" />
+          <Property Name="MapZone" Type="int" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="16" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReqDate" Type="smalldatetime" />
+          <Property Name="ReqTime" Type="int" />
+          <Property Name="ShipmentNumber" Type="int" />
+          <Property Name="LoadSequence" Type="int" />
+          <Property Name="Cost" Type="money" />
+          <Property Name="Tax" Type="money" />
+          <Property Name="Amount" Type="money" />
+          <Property Name="Weight" Type="int" />
+          <Property Name="Volume" Type="int" />
+          <Property Name="VolumeLock" Type="bit" />
+          <Property Name="LoadRating" Type="int" />
+          <Property Name="LoadType" Type="int" />
+          <Property Name="Priority_ID" Type="int" />
+          <Property Name="OrderDate" Type="datetime" />
+          <Property Name="OrderChanged" Type="tinyint" />
+          <Property Name="ChgDate" Type="datetime" />
+          <Property Name="Signed" Type="tinyint" />
+          <Property Name="Pictures" Type="bit" />
+          <Property Name="CancelDate" Type="datetime" />
+          <Property Name="FillError" Type="tinyint" />
+          <Property Name="WrittenBy_ID" Type="int" />
+          <Property Name="AssignedSalesperson" Type="int" />
+          <Property Name="PKImport" Type="nvarchar" MaxLength="100" />
+          <Property Name="DeliveriedDate" Type="datetime" />
+          <Property Name="StatusChanged" Type="bit" />
+          <Property Name="ReqDateChange" Type="bit" Nullable="false" />
+          <Property Name="ReqTimeChange" Type="bit" Nullable="false" />
+          <Property Name="TruckChange" Type="bit" />
+          <Property Name="RouteChanged" Type="bit" />
+          <Property Name="UpLoadToPhone" Type="tinyint" />
+          <Property Name="DropLat" Type="decimal" Precision="9" Scale="6" />
+          <Property Name="DropLong" Type="decimal" Precision="9" Scale="6" />
+          <Property Name="GeoRadius" Type="int" />
+          <Property Name="EMAILNOTIFICATION" Type="bit" />
+          <Property Name="ReferenceNumber" Type="varchar" MaxLength="300" />
+          <Property Name="AccountHold" Type="bit" />
+          <Property Name="PreviousStatus" Type="int" />
+          <Property Name="TransferNumber" Type="int" />
+          <Property Name="OrderTypeID" Type="int" />
+          <Property Name="Closed" Type="bit" />
+          <Property Name="TruckTypeID" Type="int" />
+          <Property Name="Mileage" Type="int" />
+          <Property Name="BackOrder" Type="bit" />
+          <Property Name="SpecialOrder" Type="bit" />
+          <Property Name="tsPHONEStatus" Type="datetime" />
+          <Property Name="CapacityLocationID" Type="int" />
+          <Property Name="dTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="ODTStatus" Type="varchar" MaxLength="25" />
+          <Property Name="OriginalLoadTimeID" Type="int" />
+          <Property Name="OriginalDeliveryDate" Type="datetime" />
+          <Property Name="OriginalLocationID" Type="int" />
+          <Property Name="HardTime" Type="bit" />
+          <Property Name="Duration" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="ArrivalTime" Type="datetime" />
+          <Property Name="DepartureTime" Type="datetime" />
+          <Property Name="ETA" Type="datetime" />
+          <Property Name="ETD" Type="datetime" />
+          <Property Name="DeliveryLock" Type="bit" />
+          <Property Name="ShippingAddressNotJobAddress" Type="bit" />
+          <Property Name="UpLoadDate" Type="datetime" />
+          <Property Name="RouteDate" Type="datetime" />
+          <Property Name="ProductETA" Type="datetime" />
+          <Property Name="CustomerRequestedDate" Type="datetime" />
+          <Property Name="CODAmountReceived" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="COD" Type="bit" />
+          <Property Name="Core" Type="bit" />
+          <Property Name="ItemsReturn" Type="bit" Nullable="false" />
+          <Property Name="DefectReturn" Type="bit" Nullable="false" />
+          <Property Name="ShipVia_Id" Type="int" />
+          <Property Name="ExpDelTime" Type="datetime" />
+          <Property Name="ExpDelBegin" Type="datetime" />
+          <Property Name="AdjustedETA" Type="datetime" />
+          <Property Name="CustomerWebUpdate" Type="bit" />
+          <Property Name="TransferETA" Type="datetime" />
+          <Property Name="SxWritebackNotesDate" Type="datetime" />
+          <Property Name="Length" Type="int" />
+          <Property Name="Length2" Type="int" />
+          <Property Name="PayType" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressChanged" Type="bit" />
+          <Property Name="PrintTicketCount" Type="int" />
+          <Property Name="ReImport" Type="tinyint" />
+          <Property Name="ScheduleLockDate" Type="datetime" />
+          <Property Name="WebOrderNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotQtyOrd" Type="int" />
+          <Property Name="TotQtyShp" Type="int" />
+          <Property Name="MilesFrom" Type="int" />
+          <Property Name="InternalUse" Type="bit" />
+        </EntityType>
+        <Function Name="sp_GetOrderData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="DeliveryModelStoreContainer">
+          <EntitySet Name="Order_tbl" EntityType="Self.Order_tbl" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DeliveryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Order_tbl">
+          <Key>
+            <PropertyRef Name="PKEY" />
+          </Key>
+          <Property Name="PKEY" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobAccount_ID" Type="Int32" />
+          <Property Name="Trip_ID" Type="Int32" />
+          <Property Name="OldTrip_ID" Type="Int32" />
+          <Property Name="Status_ID" Type="Int32" />
+          <Property Name="Location_ID" Type="Int32" />
+          <Property Name="Unit_ID" Type="Int32" />
+          <Property Name="OrderNumber" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceNumber" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="BuilderPONumber" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="ShipTo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubDivision" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="MapZone" Type="Int32" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="Zip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReqDate" Type="DateTime" Precision="0" />
+          <Property Name="ReqTime" Type="Int32" />
+          <Property Name="ShipmentNumber" Type="Int32" />
+          <Property Name="LoadSequence" Type="Int32" />
+          <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Tax" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Weight" Type="Int32" />
+          <Property Name="Volume" Type="Int32" />
+          <Property Name="VolumeLock" Type="Boolean" />
+          <Property Name="LoadRating" Type="Int32" />
+          <Property Name="LoadType" Type="Int32" />
+          <Property Name="Priority_ID" Type="Int32" />
+          <Property Name="OrderDate" Type="DateTime" Precision="3" />
+          <Property Name="OrderChanged" Type="Byte" />
+          <Property Name="ChgDate" Type="DateTime" Precision="3" />
+          <Property Name="Signed" Type="Byte" />
+          <Property Name="Pictures" Type="Boolean" />
+          <Property Name="CancelDate" Type="DateTime" Precision="3" />
+          <Property Name="FillError" Type="Byte" />
+          <Property Name="WrittenBy_ID" Type="Int32" />
+          <Property Name="AssignedSalesperson" Type="Int32" />
+          <Property Name="PKImport" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveriedDate" Type="DateTime" Precision="3" />
+          <Property Name="StatusChanged" Type="Boolean" />
+          <Property Name="ReqDateChange" Type="Boolean" Nullable="false" />
+          <Property Name="ReqTimeChange" Type="Boolean" Nullable="false" />
+          <Property Name="TruckChange" Type="Boolean" />
+          <Property Name="RouteChanged" Type="Boolean" />
+          <Property Name="UpLoadToPhone" Type="Byte" />
+          <Property Name="DropLat" Type="Decimal" Precision="9" Scale="6" />
+          <Property Name="DropLong" Type="Decimal" Precision="9" Scale="6" />
+          <Property Name="GeoRadius" Type="Int32" />
+          <Property Name="EMAILNOTIFICATION" Type="Boolean" />
+          <Property Name="ReferenceNumber" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="AccountHold" Type="Boolean" />
+          <Property Name="PreviousStatus" Type="Int32" />
+          <Property Name="TransferNumber" Type="Int32" />
+          <Property Name="OrderTypeID" Type="Int32" />
+          <Property Name="Closed" Type="Boolean" />
+          <Property Name="TruckTypeID" Type="Int32" />
+          <Property Name="Mileage" Type="Int32" />
+          <Property Name="BackOrder" Type="Boolean" />
+          <Property Name="SpecialOrder" Type="Boolean" />
+          <Property Name="tsPHONEStatus" Type="DateTime" Precision="3" />
+          <Property Name="CapacityLocationID" Type="Int32" />
+          <Property Name="dTimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ODTStatus" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="OriginalLoadTimeID" Type="Int32" />
+          <Property Name="OriginalDeliveryDate" Type="DateTime" Precision="3" />
+          <Property Name="OriginalLocationID" Type="Int32" />
+          <Property Name="HardTime" Type="Boolean" />
+          <Property Name="Duration" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ArrivalTime" Type="DateTime" Precision="3" />
+          <Property Name="DepartureTime" Type="DateTime" Precision="3" />
+          <Property Name="ETA" Type="DateTime" Precision="3" />
+          <Property Name="ETD" Type="DateTime" Precision="3" />
+          <Property Name="DeliveryLock" Type="Boolean" />
+          <Property Name="ShippingAddressNotJobAddress" Type="Boolean" />
+          <Property Name="UpLoadDate" Type="DateTime" Precision="3" />
+          <Property Name="RouteDate" Type="DateTime" Precision="3" />
+          <Property Name="ProductETA" Type="DateTime" Precision="3" />
+          <Property Name="CustomerRequestedDate" Type="DateTime" Precision="3" />
+          <Property Name="CODAmountReceived" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="COD" Type="Boolean" />
+          <Property Name="Core" Type="Boolean" />
+          <Property Name="ItemsReturn" Type="Boolean" Nullable="false" />
+          <Property Name="DefectReturn" Type="Boolean" Nullable="false" />
+          <Property Name="ShipVia_Id" Type="Int32" />
+          <Property Name="ExpDelTime" Type="DateTime" Precision="3" />
+          <Property Name="ExpDelBegin" Type="DateTime" Precision="3" />
+          <Property Name="AdjustedETA" Type="DateTime" Precision="3" />
+          <Property Name="CustomerWebUpdate" Type="Boolean" />
+          <Property Name="TransferETA" Type="DateTime" Precision="3" />
+          <Property Name="SxWritebackNotesDate" Type="DateTime" Precision="3" />
+          <Property Name="Length" Type="Int32" />
+          <Property Name="Length2" Type="Int32" />
+          <Property Name="PayType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AddressChanged" Type="Boolean" />
+          <Property Name="PrintTicketCount" Type="Int32" />
+          <Property Name="ReImport" Type="Byte" />
+          <Property Name="ScheduleLockDate" Type="DateTime" Precision="3" />
+          <Property Name="WebOrderNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TotQtyOrd" Type="Int32" />
+          <Property Name="TotQtyShp" Type="Int32" />
+          <Property Name="MilesFrom" Type="Int32" />
+          <Property Name="InternalUse" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="DeliveryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Order_tbl" EntityType="Self.Order_tbl" />
+          <FunctionImport Name="sp_GetOrderData" ReturnType="Collection(DeliveryModel.sp_GetOrderData_Result)" />
+        </EntityContainer>
+        <ComplexType Name="sp_GetOrderData_Result">
+          <Property Type="Int32" Name="PKEY" Nullable="false" />
+          <Property Type="Int32" Name="JobAccount_ID" Nullable="true" />
+          <Property Type="Int32" Name="OldTrip_ID" Nullable="true" />
+          <Property Type="Int32" Name="Status_ID" Nullable="true" />
+          <Property Type="Int32" Name="Location_ID" Nullable="true" />
+          <Property Type="Int32" Name="Unit_ID" Nullable="true" />
+          <Property Type="String" Name="OrderNumber" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="InvoiceNumber" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="BuilderPONumber" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="ShipTo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Address2" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SubDivision" Nullable="true" MaxLength="24" />
+          <Property Type="Int32" Name="MapZone" Nullable="true" />
+          <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="State" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Zip" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ReqDate" Nullable="true" Precision="16" />
+          <Property Type="Int32" Name="ReqTime" Nullable="true" />
+          <Property Type="Int32" Name="ShipmentNumber" Nullable="true" />
+          <Property Type="Int32" Name="LoadSequence" Nullable="true" />
+          <Property Type="Decimal" Name="Cost" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Tax" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="Weight" Nullable="true" />
+          <Property Type="Int32" Name="Volume" Nullable="true" />
+          <Property Type="Boolean" Name="VolumeLock" Nullable="true" />
+          <Property Type="Int32" Name="LoadRating" Nullable="true" />
+          <Property Type="Int32" Name="LoadType" Nullable="true" />
+          <Property Type="Int32" Name="Priority_ID" Nullable="true" />
+          <Property Type="DateTime" Name="OrderDate" Nullable="true" Precision="23" />
+          <Property Type="Byte" Name="OrderChanged" Nullable="true" />
+          <Property Type="DateTime" Name="ChgDate" Nullable="true" Precision="23" />
+          <Property Type="Byte" Name="Signed" Nullable="true" />
+          <Property Type="Boolean" Name="Pictures" Nullable="true" />
+          <Property Type="DateTime" Name="CancelDate" Nullable="true" Precision="23" />
+          <Property Type="Byte" Name="FillError" Nullable="true" />
+          <Property Type="Int32" Name="WrittenBy_ID" Nullable="true" />
+          <Property Type="Int32" Name="AssignedSalesperson" Nullable="true" />
+          <Property Type="String" Name="PKImport" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="DeliveriedDate" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="StatusChanged" Nullable="true" />
+          <Property Type="Boolean" Name="ReqDateChange" Nullable="false" />
+          <Property Type="Boolean" Name="ReqTimeChange" Nullable="false" />
+          <Property Type="Boolean" Name="TruckChange" Nullable="true" />
+          <Property Type="Boolean" Name="RouteChanged" Nullable="true" />
+          <Property Type="Byte" Name="UpLoadToPhone" Nullable="true" />
+          <Property Type="Decimal" Name="DropLat" Nullable="true" Precision="9" Scale="6" />
+          <Property Type="Decimal" Name="DropLong" Nullable="true" Precision="9" Scale="6" />
+          <Property Type="Int32" Name="GeoRadius" Nullable="true" />
+          <Property Type="Boolean" Name="EMAILNOTIFICATION" Nullable="true" />
+          <Property Type="String" Name="ReferenceNumber" Nullable="true" MaxLength="300" />
+          <Property Type="Boolean" Name="AccountHold" Nullable="true" />
+          <Property Type="Int32" Name="PreviousStatus" Nullable="true" />
+          <Property Type="Int32" Name="TransferNumber" Nullable="true" />
+          <Property Type="Int32" Name="OrderTypeID" Nullable="true" />
+          <Property Type="Boolean" Name="Closed" Nullable="true" />
+          <Property Type="Int32" Name="TruckTypeID" Nullable="true" />
+          <Property Type="Int32" Name="Mileage" Nullable="true" />
+          <Property Type="Boolean" Name="BackOrder" Nullable="true" />
+          <Property Type="Boolean" Name="SpecialOrder" Nullable="true" />
+          <Property Type="DateTime" Name="tsPHONEStatus" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="CapacityLocationID" Nullable="true" />
+          <Property Type="DateTime" Name="dTimeStamp" Nullable="false" Precision="23" />
+          <Property Type="String" Name="ODTStatus" Nullable="true" MaxLength="25" />
+          <Property Type="Int32" Name="OriginalLoadTimeID" Nullable="true" />
+          <Property Type="DateTime" Name="OriginalDeliveryDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="OriginalLocationID" Nullable="true" />
+          <Property Type="Boolean" Name="HardTime" Nullable="true" />
+          <Property Type="Decimal" Name="Duration" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="DateTime" Name="ArrivalTime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DepartureTime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ETA" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ETD" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="DeliveryLock" Nullable="true" />
+          <Property Type="Boolean" Name="ShippingAddressNotJobAddress" Nullable="true" />
+          <Property Type="DateTime" Name="UpLoadDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="RouteDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ProductETA" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="CustomerRequestedDate" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="CODAmountReceived" Nullable="true" Precision="9" Scale="2" />
+          <Property Type="Boolean" Name="COD" Nullable="true" />
+          <Property Type="Boolean" Name="Core" Nullable="true" />
+          <Property Type="Boolean" Name="ItemsReturn" Nullable="false" />
+          <Property Type="Boolean" Name="DefectReturn" Nullable="false" />
+          <Property Type="Int32" Name="ShipVia_Id" Nullable="true" />
+          <Property Type="DateTime" Name="ExpDelTime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ExpDelBegin" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="AdjustedETA" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="CustomerWebUpdate" Nullable="true" />
+          <Property Type="DateTime" Name="TransferETA" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="SxWritebackNotesDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Length" Nullable="true" />
+          <Property Type="Int32" Name="Length2" Nullable="true" />
+          <Property Type="String" Name="PayType" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="AddressChanged" Nullable="true" />
+          <Property Type="Int32" Name="PrintTicketCount" Nullable="true" />
+          <Property Type="Byte" Name="ReImport" Nullable="true" />
+          <Property Type="DateTime" Name="ScheduleLockDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="WebOrderNumber" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="TotQtyOrd" Nullable="true" />
+          <Property Type="Int32" Name="TotQtyShp" Nullable="true" />
+          <Property Type="Int32" Name="MilesFrom" Nullable="true" />
+          <Property Type="Boolean" Name="InternalUse" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DeliveryModelStoreContainer" CdmEntityContainer="DeliveryEntities">
+          <EntitySetMapping Name="Order_tbl">
+            <EntityTypeMapping TypeName="DeliveryModel.Order_tbl">
+              <MappingFragment StoreEntitySet="Order_tbl">
+                <ScalarProperty Name="PKEY" ColumnName="PKEY" />
+                <ScalarProperty Name="JobAccount_ID" ColumnName="JobAccount_ID" />
+                <ScalarProperty Name="Trip_ID" ColumnName="Trip_ID" />
+                <ScalarProperty Name="OldTrip_ID" ColumnName="OldTrip_ID" />
+                <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+                <ScalarProperty Name="Location_ID" ColumnName="Location_ID" />
+                <ScalarProperty Name="Unit_ID" ColumnName="Unit_ID" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+                <ScalarProperty Name="BuilderPONumber" ColumnName="BuilderPONumber" />
+                <ScalarProperty Name="ShipTo" ColumnName="ShipTo" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="SubDivision" ColumnName="SubDivision" />
+                <ScalarProperty Name="MapZone" ColumnName="MapZone" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="ReqDate" ColumnName="ReqDate" />
+                <ScalarProperty Name="ReqTime" ColumnName="ReqTime" />
+                <ScalarProperty Name="ShipmentNumber" ColumnName="ShipmentNumber" />
+                <ScalarProperty Name="LoadSequence" ColumnName="LoadSequence" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="VolumeLock" ColumnName="VolumeLock" />
+                <ScalarProperty Name="LoadRating" ColumnName="LoadRating" />
+                <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+                <ScalarProperty Name="Priority_ID" ColumnName="Priority_ID" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="OrderChanged" ColumnName="OrderChanged" />
+                <ScalarProperty Name="ChgDate" ColumnName="ChgDate" />
+                <ScalarProperty Name="Signed" ColumnName="Signed" />
+                <ScalarProperty Name="Pictures" ColumnName="Pictures" />
+                <ScalarProperty Name="CancelDate" ColumnName="CancelDate" />
+                <ScalarProperty Name="FillError" ColumnName="FillError" />
+                <ScalarProperty Name="WrittenBy_ID" ColumnName="WrittenBy_ID" />
+                <ScalarProperty Name="AssignedSalesperson" ColumnName="AssignedSalesperson" />
+                <ScalarProperty Name="PKImport" ColumnName="PKImport" />
+                <ScalarProperty Name="DeliveriedDate" ColumnName="DeliveriedDate" />
+                <ScalarProperty Name="StatusChanged" ColumnName="StatusChanged" />
+                <ScalarProperty Name="ReqDateChange" ColumnName="ReqDateChange" />
+                <ScalarProperty Name="ReqTimeChange" ColumnName="ReqTimeChange" />
+                <ScalarProperty Name="TruckChange" ColumnName="TruckChange" />
+                <ScalarProperty Name="RouteChanged" ColumnName="RouteChanged" />
+                <ScalarProperty Name="UpLoadToPhone" ColumnName="UpLoadToPhone" />
+                <ScalarProperty Name="DropLat" ColumnName="DropLat" />
+                <ScalarProperty Name="DropLong" ColumnName="DropLong" />
+                <ScalarProperty Name="GeoRadius" ColumnName="GeoRadius" />
+                <ScalarProperty Name="EMAILNOTIFICATION" ColumnName="EMAILNOTIFICATION" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="AccountHold" ColumnName="AccountHold" />
+                <ScalarProperty Name="PreviousStatus" ColumnName="PreviousStatus" />
+                <ScalarProperty Name="TransferNumber" ColumnName="TransferNumber" />
+                <ScalarProperty Name="OrderTypeID" ColumnName="OrderTypeID" />
+                <ScalarProperty Name="Closed" ColumnName="Closed" />
+                <ScalarProperty Name="TruckTypeID" ColumnName="TruckTypeID" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+                <ScalarProperty Name="BackOrder" ColumnName="BackOrder" />
+                <ScalarProperty Name="SpecialOrder" ColumnName="SpecialOrder" />
+                <ScalarProperty Name="tsPHONEStatus" ColumnName="tsPHONEStatus" />
+                <ScalarProperty Name="CapacityLocationID" ColumnName="CapacityLocationID" />
+                <ScalarProperty Name="dTimeStamp" ColumnName="dTimeStamp" />
+                <ScalarProperty Name="ODTStatus" ColumnName="ODTStatus" />
+                <ScalarProperty Name="OriginalLoadTimeID" ColumnName="OriginalLoadTimeID" />
+                <ScalarProperty Name="OriginalDeliveryDate" ColumnName="OriginalDeliveryDate" />
+                <ScalarProperty Name="OriginalLocationID" ColumnName="OriginalLocationID" />
+                <ScalarProperty Name="HardTime" ColumnName="HardTime" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="ArrivalTime" ColumnName="ArrivalTime" />
+                <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+                <ScalarProperty Name="ETA" ColumnName="ETA" />
+                <ScalarProperty Name="ETD" ColumnName="ETD" />
+                <ScalarProperty Name="DeliveryLock" ColumnName="DeliveryLock" />
+                <ScalarProperty Name="ShippingAddressNotJobAddress" ColumnName="ShippingAddressNotJobAddress" />
+                <ScalarProperty Name="UpLoadDate" ColumnName="UpLoadDate" />
+                <ScalarProperty Name="RouteDate" ColumnName="RouteDate" />
+                <ScalarProperty Name="ProductETA" ColumnName="ProductETA" />
+                <ScalarProperty Name="CustomerRequestedDate" ColumnName="CustomerRequestedDate" />
+                <ScalarProperty Name="CODAmountReceived" ColumnName="CODAmountReceived" />
+                <ScalarProperty Name="COD" ColumnName="COD" />
+                <ScalarProperty Name="Core" ColumnName="Core" />
+                <ScalarProperty Name="ItemsReturn" ColumnName="ItemsReturn" />
+                <ScalarProperty Name="DefectReturn" ColumnName="DefectReturn" />
+                <ScalarProperty Name="ShipVia_Id" ColumnName="ShipVia_Id" />
+                <ScalarProperty Name="ExpDelTime" ColumnName="ExpDelTime" />
+                <ScalarProperty Name="ExpDelBegin" ColumnName="ExpDelBegin" />
+                <ScalarProperty Name="AdjustedETA" ColumnName="AdjustedETA" />
+                <ScalarProperty Name="CustomerWebUpdate" ColumnName="CustomerWebUpdate" />
+                <ScalarProperty Name="TransferETA" ColumnName="TransferETA" />
+                <ScalarProperty Name="SxWritebackNotesDate" ColumnName="SxWritebackNotesDate" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="Length2" ColumnName="Length2" />
+                <ScalarProperty Name="PayType" ColumnName="PayType" />
+                <ScalarProperty Name="AddressChanged" ColumnName="AddressChanged" />
+                <ScalarProperty Name="PrintTicketCount" ColumnName="PrintTicketCount" />
+                <ScalarProperty Name="ReImport" ColumnName="ReImport" />
+                <ScalarProperty Name="ScheduleLockDate" ColumnName="ScheduleLockDate" />
+                <ScalarProperty Name="WebOrderNumber" ColumnName="WebOrderNumber" />
+                <ScalarProperty Name="TotQtyOrd" ColumnName="TotQtyOrd" />
+                <ScalarProperty Name="TotQtyShp" ColumnName="TotQtyShp" />
+                <ScalarProperty Name="MilesFrom" ColumnName="MilesFrom" />
+                <ScalarProperty Name="InternalUse" ColumnName="InternalUse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetOrderData" FunctionName="DeliveryModel.Store.sp_GetOrderData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DeliveryModel.sp_GetOrderData_Result">
+                <ScalarProperty Name="PKEY" ColumnName="PKEY" />
+                <ScalarProperty Name="JobAccount_ID" ColumnName="JobAccount_ID" />
+                <ScalarProperty Name="OldTrip_ID" ColumnName="OldTrip_ID" />
+                <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+                <ScalarProperty Name="Location_ID" ColumnName="Location_ID" />
+                <ScalarProperty Name="Unit_ID" ColumnName="Unit_ID" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+                <ScalarProperty Name="BuilderPONumber" ColumnName="BuilderPONumber" />
+                <ScalarProperty Name="ShipTo" ColumnName="ShipTo" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="SubDivision" ColumnName="SubDivision" />
+                <ScalarProperty Name="MapZone" ColumnName="MapZone" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="ReqDate" ColumnName="ReqDate" />
+                <ScalarProperty Name="ReqTime" ColumnName="ReqTime" />
+                <ScalarProperty Name="ShipmentNumber" ColumnName="ShipmentNumber" />
+                <ScalarProperty Name="LoadSequence" ColumnName="LoadSequence" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="VolumeLock" ColumnName="VolumeLock" />
+                <ScalarProperty Name="LoadRating" ColumnName="LoadRating" />
+                <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+                <ScalarProperty Name="Priority_ID" ColumnName="Priority_ID" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="OrderChanged" ColumnName="OrderChanged" />
+                <ScalarProperty Name="ChgDate" ColumnName="ChgDate" />
+                <ScalarProperty Name="Signed" ColumnName="Signed" />
+                <ScalarProperty Name="Pictures" ColumnName="Pictures" />
+                <ScalarProperty Name="CancelDate" ColumnName="CancelDate" />
+                <ScalarProperty Name="FillError" ColumnName="FillError" />
+                <ScalarProperty Name="WrittenBy_ID" ColumnName="WrittenBy_ID" />
+                <ScalarProperty Name="AssignedSalesperson" ColumnName="AssignedSalesperson" />
+                <ScalarProperty Name="PKImport" ColumnName="PKImport" />
+                <ScalarProperty Name="DeliveriedDate" ColumnName="DeliveriedDate" />
+                <ScalarProperty Name="StatusChanged" ColumnName="StatusChanged" />
+                <ScalarProperty Name="ReqDateChange" ColumnName="ReqDateChange" />
+                <ScalarProperty Name="ReqTimeChange" ColumnName="ReqTimeChange" />
+                <ScalarProperty Name="TruckChange" ColumnName="TruckChange" />
+                <ScalarProperty Name="RouteChanged" ColumnName="RouteChanged" />
+                <ScalarProperty Name="UpLoadToPhone" ColumnName="UpLoadToPhone" />
+                <ScalarProperty Name="DropLat" ColumnName="DropLat" />
+                <ScalarProperty Name="DropLong" ColumnName="DropLong" />
+                <ScalarProperty Name="GeoRadius" ColumnName="GeoRadius" />
+                <ScalarProperty Name="EMAILNOTIFICATION" ColumnName="EMAILNOTIFICATION" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="AccountHold" ColumnName="AccountHold" />
+                <ScalarProperty Name="PreviousStatus" ColumnName="PreviousStatus" />
+                <ScalarProperty Name="TransferNumber" ColumnName="TransferNumber" />
+                <ScalarProperty Name="OrderTypeID" ColumnName="OrderTypeID" />
+                <ScalarProperty Name="Closed" ColumnName="Closed" />
+                <ScalarProperty Name="TruckTypeID" ColumnName="TruckTypeID" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+                <ScalarProperty Name="BackOrder" ColumnName="BackOrder" />
+                <ScalarProperty Name="SpecialOrder" ColumnName="SpecialOrder" />
+                <ScalarProperty Name="tsPHONEStatus" ColumnName="tsPHONEStatus" />
+                <ScalarProperty Name="CapacityLocationID" ColumnName="CapacityLocationID" />
+                <ScalarProperty Name="dTimeStamp" ColumnName="dTimeStamp" />
+                <ScalarProperty Name="ODTStatus" ColumnName="ODTStatus" />
+                <ScalarProperty Name="OriginalLoadTimeID" ColumnName="OriginalLoadTimeID" />
+                <ScalarProperty Name="OriginalDeliveryDate" ColumnName="OriginalDeliveryDate" />
+                <ScalarProperty Name="OriginalLocationID" ColumnName="OriginalLocationID" />
+                <ScalarProperty Name="HardTime" ColumnName="HardTime" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="ArrivalTime" ColumnName="ArrivalTime" />
+                <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+                <ScalarProperty Name="ETA" ColumnName="ETA" />
+                <ScalarProperty Name="ETD" ColumnName="ETD" />
+                <ScalarProperty Name="DeliveryLock" ColumnName="DeliveryLock" />
+                <ScalarProperty Name="ShippingAddressNotJobAddress" ColumnName="ShippingAddressNotJobAddress" />
+                <ScalarProperty Name="UpLoadDate" ColumnName="UpLoadDate" />
+                <ScalarProperty Name="RouteDate" ColumnName="RouteDate" />
+                <ScalarProperty Name="ProductETA" ColumnName="ProductETA" />
+                <ScalarProperty Name="CustomerRequestedDate" ColumnName="CustomerRequestedDate" />
+                <ScalarProperty Name="CODAmountReceived" ColumnName="CODAmountReceived" />
+                <ScalarProperty Name="COD" ColumnName="COD" />
+                <ScalarProperty Name="Core" ColumnName="Core" />
+                <ScalarProperty Name="ItemsReturn" ColumnName="ItemsReturn" />
+                <ScalarProperty Name="DefectReturn" ColumnName="DefectReturn" />
+                <ScalarProperty Name="ShipVia_Id" ColumnName="ShipVia_Id" />
+                <ScalarProperty Name="ExpDelTime" ColumnName="ExpDelTime" />
+                <ScalarProperty Name="ExpDelBegin" ColumnName="ExpDelBegin" />
+                <ScalarProperty Name="AdjustedETA" ColumnName="AdjustedETA" />
+                <ScalarProperty Name="CustomerWebUpdate" ColumnName="CustomerWebUpdate" />
+                <ScalarProperty Name="TransferETA" ColumnName="TransferETA" />
+                <ScalarProperty Name="SxWritebackNotesDate" ColumnName="SxWritebackNotesDate" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="Length2" ColumnName="Length2" />
+                <ScalarProperty Name="PayType" ColumnName="PayType" />
+                <ScalarProperty Name="AddressChanged" ColumnName="AddressChanged" />
+                <ScalarProperty Name="PrintTicketCount" ColumnName="PrintTicketCount" />
+                <ScalarProperty Name="ReImport" ColumnName="ReImport" />
+                <ScalarProperty Name="ScheduleLockDate" ColumnName="ScheduleLockDate" />
+                <ScalarProperty Name="WebOrderNumber" ColumnName="WebOrderNumber" />
+                <ScalarProperty Name="TotQtyOrd" ColumnName="TotQtyOrd" />
+                <ScalarProperty Name="TotQtyShp" ColumnName="TotQtyShp" />
+                <ScalarProperty Name="MilesFrom" ColumnName="MilesFrom" />
+                <ScalarProperty Name="InternalUse" ColumnName="InternalUse" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
